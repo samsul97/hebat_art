@@ -53,6 +53,18 @@
 					{
 						include 'konten/detail/tampil.php';
 					}
+					elseif ($_GET ['page']=="read_laporan")
+					{
+						include 'konten/laporan/tampil.php';
+					}
+					elseif ($_GET ['page']=="insert_laporan")
+					{
+						include 'konten/laporan/tambah.php';
+					}
+					elseif ($_GET ['page']=="update_laporan")
+					{
+						include 'konten/laporan/ubah.php';
+					}
 					elseif($_GET['page']=="logout")
 					{
 						include'../logout.php';
