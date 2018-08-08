@@ -89,21 +89,21 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item active" style="background-image: url('https://wallpapersite.com/images/wallpapers/iphone-x-2560x1440-hd-11143.png')">
             <div class="carousel-caption d-none d-md-block">
               <h3>First Slide</h3>
               <p>This is a description for the first slide.</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('https://i.ytimg.com/vi/xwznJZLAsos/maxresdefault.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Second Slide</h3>
               <p>This is a description for the second slide.</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('http://istuffcostarica.com/wp-content/uploads/2018/03/iphone-x-3d-model-max-obj-fbx.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Third Slide</h3>
               <p>This is a description for the third slide.</p>
@@ -121,16 +121,39 @@
       </div>
     </header>
 
-<section>
-  <div class="container">
-    <h2>Kategori shop</h2>
-    <div class="row">
-      <div class="card">
-        <img src="img/menushop.png" alt="">
+<section id="sectionone">
+    <div class="container">
+      <div class="TextTitle">
+          <h3>Kategori shop</h3>
+              </div>
+    <div class="row tx-center">
 
+      <div class="col-lg-3 col-sm-6 mb-4" >
+      <div class="card" id="">
+        <img  id="img-card" src="img/menushop.png" alt="">
+          </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4" >
+      <div class="card" id="">
+        <img  id="img-card" src="img/menushop.png" alt="">
+          </div>
+      </div>
+
+
+      <div class="col-lg-3 col-sm-6 mb-4" >
+      <div class="card" id="">
+        <img  id="img-card" src="img/menushop.png" alt="">
+          </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 mb-4" >
+      <div class="card" id="">
+        <img  id="img-card" src="img/menushop.png" alt="">
+          </div>
       </div>
 
     </div>
+  </div>
 
   </div>
 </section>
@@ -140,11 +163,13 @@
 
 
 <section>
-<div class="container">
+<div class="container-fluid">
+<div class="TextTitleTwo">
 
-      <!-- Portfolio Section -->
-      <h2>Portfolio Heading</h2>
+        <!-- Portfolio Section -->
+        <h2>What'sHot</h2>
 
+</div>
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
