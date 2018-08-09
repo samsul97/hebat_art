@@ -43,7 +43,7 @@
                         <th> No </th>
                         <th> Nama </th>
                         <th> Harga </th>
-                        <th> Deskripsi </th>
+                        <!-- <th> Deskripsi </th> -->
                         <th> Berat </th>
                         <th> Ukuran </th>
                         <!-- <th> Sampul </th> -->
@@ -73,14 +73,13 @@
                         <td>$no</td>
                         <td>$row[nama]</td>
                         <td>$row[harga]</td>
-                        <td>$row[deskripsi]</td>
                         <td>$row[berat]</td>
                         <td>$row[ukuran]</td>
-                        <td><a href= 'home.php?page=detail_barang&id=$row[id_barang]' class='btn btn-success'> View </a></td>
-                        <td><img src = 'konten/barang/image/$row[image]' width='50px'> </td>
+                        <td><img src = 'images/barang/$row[image]' width='50px'> </td>
                         <td>
-                        <a href = 'home.php?page=update_barang&id=$row[id_barang]'><button class='btn btn-primary btn-xs'><i class='fa fa-pencil'></i></button></a>
-                        <a href = 'aksi.php?act=hapus_barang&id=$row[id_barang]' onClick=\"return confirm ('apakah anda benar akan menghapus post Nomor $row[id_barang]?')\"><button class='btn btn-danger btn-xs'><i class='fa fa-trash-o '></i></button></a>
+                        <a href = 'home.php?page=update_barang&id_barang=$row[id_barang]'><button class='btn btn-primary btn-xs'><i class='fa fa-pencil'></i></button></a>
+                        <a href= 'home.php?page=detail_barang&id_barang=$row[id_barang]' <button class='btn btn-primary btn-xs'><i class='fa fa-info'></i></button> </a>
+                        <a href = 'aksi.php?act=hapus_barang&id_barang=$row[id_barang]' onClick=\"return confirm ('apakah anda benar akan menghapus post Nomor $row[id_barang]?')\"><button class='btn btn-danger btn-xs'><i class='fa fa-trash-o '></i></button></a>
                         </td>
                         </tr>
                         ";
@@ -89,6 +88,12 @@
                     ?>
                     </tbody>
                   </table>
+                  <br>
+                        <form role ="form" method="post" action="isi/eskuldananggota/print_anggota.php">
+                        <div class="col-md-4">
+                          <button type="submit" class="btn btn-primary" style="width: 80px;">Print</button>
+                        </div><br/>
+                      </form>
                 </div>
               </div>
             </div>

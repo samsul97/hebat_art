@@ -16,7 +16,7 @@
             </ol>
 
 
-            <form upload='uploadForm' action='aksi.php?act=input_buku' method='post' enctype='multipart/form-data' class='form-horizontal style-form'>
+            <form upload='uploadForm' action='aksi.php?act=input_barang' method='post' enctype='multipart/form-data' class='form-horizontal style-form'>
 
               <div class="form-group">
                 <h5 class="col-md-12">Nama</h5>
@@ -45,20 +45,25 @@
             <ol class="breadcrumb">
             <div class='col-md-4 form-group' style="float: right;">
             <h5 class='col-md-12'>Berat</h5>
-            <div class='col-sm-12'>
+            <div class='input-group'>
               <input class='form-control' required="" id='berat' name="berat"  placeholder="Berat Barang">
+              <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">Gram</span>
+        </div>
               <small>Berat barang di perlukan untuk estimasi ongkos kirim. Coba gunakan perhitungan volumetrik.</small>
             </div>
           </div>
 
-          <div class='col-md-4 form-group' style="float: right;">
+          <div class='col-md-3 form-group' style="float: right;">
             <h5 class='col-md-12'>Ukuran</h5>
-            <div class='col-sm-12'>
+            <div class='input-group'>
               <input class='form-control' required="" id='ukuran' name="ukuran"  placeholder="Ukuran barang">
+              <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">Cm</span>
+        </div>
               <small>Ukuran barang adalah sangat penting. Coba input ukuran dengan sesuai.</small>
             </div>
           </div>
-
           <div class='col-md-4 form-group' style="float: right;">
             <h5 class='col-md-12'>Harga</h5>
             <div class='col-sm-12'>
@@ -76,7 +81,7 @@
           </div>
 
           <div class="form-group">
-            <h5 class="col-md-12">Upload Image File:</h5>
+            <h5 class="col-md-12">Upload Foto Barang</h5>
             <div class="col-md-12">
               <input name='image' type='file' class='inputFile' required="" /><br><h6 style="color: #CF000F"><font size="3"></font> Max. 200 KB </h6>
             </div>
@@ -85,8 +90,8 @@
 
           <div class='form-group'>
             <div class='col-sm-12'>
-              <button type="submit" name="submit" value="submit" class="btn btn-success"><i class="fa fa-check">Tambahkan</i></button>
-              <a href="home.php?page=read_buku"><button type="button" class="btn btn-success"><i class="fa fa-close"> Cancel</i></button></a>
+              <button type="submit" name="submit" value="submit" class="btn btn-primary"><i class="fa fa-check">Save</i></button>
+              <a href="home.php?page=read_barang"><button type="button" style="color: #1645dd; height: 35px; padding-bottom: 6px;"><i class="fa fa-close">Batal</i></button></a>
             </div>
           </div>
 

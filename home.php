@@ -22,7 +22,7 @@ if (isset($_SESSION['namauser']))
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <!-- <a href="home.php?page=dashboard"><img src="images/logo.png" style="position: relative; margin-top: 6px; width: 100px; height: 40px"; ></a> -->
-    <b><a class="navbar-brand" style="margin-top: 4px; margin-left: 8px; color: #e6be34" href="#">Hebat-art</a></b>
+    <b><a class="navbar-brand" style="margin-top: 4px; margin-left: 8px; color: #e6be34" href="home.php?dashboard">Hebat-art</a></b>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,41 +36,43 @@ if (isset($_SESSION['namauser']))
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kelola Penerbit">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Data Pembeli">
           <a class="nav-link" href="home.php?page=read_pembeli">
-            <i class="fa fa-fw fa-bookmark"></i>
+            <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Pembeli</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kelola Kategori">
-          <a class="nav-link" href="home.php?page=read_barang">
-            <i class="fa fa-fw fa-list"></i>
-            <span class="nav-link-text">Barang</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kelola Penulis">
-          <a class="nav-link" href="home.php?page=read_keranjang">
-            <i class="fa fa-fw fa-pencil"></i>
-            <span class="nav-link-text">Keranjang</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kelola Buku">
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kategori">
           <a class="nav-link" href="home.php?page=read_kategori">
-            <i class="fa fa-fw fa-book"></i>
+            <i class="fa fa-fw fa-navicon"></i>
             <span class="nav-link-text">Kategori</span>
           </a>
         </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Data User">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kelola Barang">
+          <a class="nav-link" href="home.php?page=read_barang">
+            <i class="fa fa-fw fa-briefcase"></i>
+            <span class="nav-link-text">Barang</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Data Keranjang">
+          <a class="nav-link" href="home.php?page=read_keranjang">
+            <i class="fa fa-fw fa-shopping-cart"></i>
+            <span class="nav-link-text">Keranjang</span>
+          </a>
+        </li>
+        
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Data Transaksi">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-              <i class="fa fa-fw fa-users"></i>
+              <i class="fa fa-fw fa-exchange"></i>
               <span class="nav-link-text">Data Transaksi</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents">
               <li>
-                <a class="nav-link"  href="home.php?page=read_transaksi"> <i class="fa fa-fw fa-user"></i> Data Transaksi </a>
+                <a class="nav-link"  href="home.php?page=read_transaksi"> <i class="fa fa-fw fa-exchange"></i> Data Transaksi </a>
               </li>
               <li>
-                <a class="nav-link" href="home.php?page=detail_transaksi"> <i class="fa fa-fw fa-user"></i> Detail Transaksi </a>
+                <a class="nav-link" href="home.php?page=detail_transaksi"> <i class="fa fa-fw fa-exchange"></i> Detail Transaksi </a>
               </li>
             </ul>
           </li>
