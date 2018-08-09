@@ -124,6 +124,7 @@
 <section id="sectionone">
     <div class="container">
       <div class="TextTitle">
+
           <h3>Kategori shop</h3>
               </div>
     <div class="row tx-center">
@@ -286,6 +287,8 @@
       </div>
       <!-- /.container -->
     </footer>
+
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

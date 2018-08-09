@@ -27,3 +27,29 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+.TextTitle {
+  padding: 30px;
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    /* text-transform: uppercase; */
+    font-size: 1.5em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+#sectionone{
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+.TextTitleTwo {
+  padding: 30px;
+  text-align: center;
+
+}
+.card-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.card-body {
+  text-align: center;
+  text-transform: uppercase;
+}
