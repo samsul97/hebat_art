@@ -22,6 +22,7 @@ else
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<body>
+		<center>
 		<div class="container" style="width:530px;margin-top:15%;border:0px solid #000;">
 			<div style="font-size:14px;color:#04B4AE;text-align:center;margin-bottom:10px;font-family:Segoe Print;"><!-- <b><i class="fa fa-envira"></i> Free Template's</b> --></div>
 
@@ -43,6 +44,7 @@ else
 				</div> -->
 			</form>
 		</body> 
+		</center>
 	</head>
 	</html>
 	<?php

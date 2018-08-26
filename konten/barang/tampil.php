@@ -32,7 +32,7 @@
 
 			<div class="card mb-3">
               <div class="card-header">
-                <i class="fa fa-table"></i> Data Buku
+                <i class="fa fa-table"></i> Data Barang
               </div>
               <div class="card-body">
                 <div class="table-responsive">

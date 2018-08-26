@@ -1,61 +1,63 @@
+<?php
+include "../koneksi.php";
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Hebat-Art Digital Printing</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logo.png" style="width: 100px; height: 100px;" />
+  <!-- Custom styles for this template -->
+  <link href="css/modern-business.css" rel="stylesheet">
 
 
-  <!DOCTYPE html>
-  <html lang="en">
+</head>
 
-  <head>
+<body>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Hebat-Art Digital Printing</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/logo.png" style="width: 100px; height: 100px;" />
-    <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
-
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container" style="height: 50px;">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 100px; height: 100px;"></a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Produk
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Cara Pemesanan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="">About</a>
-            </li>
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container" style="height: 50px;">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" style="width: 100px; height: 100px;"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Produk
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="portfolio-1-col.html">Fashion Baju & Kaos</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">Cetak Lembaran</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">Design</a>
+              <a class="dropdown-item" href="portfolio-4-col.html">Large Format</a>
+              <a class="dropdown-item" href="portfolio-item.html">Kado & Aksesoris</a>
+              <a class="dropdown-item" href="portfolio-item.html">Sticker</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Cara Pemesanan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+          </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Other Pages
@@ -124,43 +126,63 @@
           <!-- <h2>Produk</h2> -->
           <section id="sectionone">
             <div class="container">
-              
+
               <center><h3>Kategori'Shop</h3><center>
                 <br>
-                <?php
-include "../koneksi.php";
-
-$data = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang ASC");
-while ($row = mysqli_fetch_array($data)) {
-  ?>
                 <div class="row tx-center">
-
-                  <div class="col-lg-3 col-sm-6 mb-4" >
-                    <div class="card" id="">
-                      <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 mb-4" >
-                    <div class="card" id="">
-                      <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
-                    </div>
-                  </div>
-
-
-                  <div class="col-lg-3 col-sm-6 mb-4" >
-                    <div class="card" id="">
-                      <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 col-sm-6 mb-4" >
-                    <div class="card" id="">
-                      <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
-                    </div>
-                  </div>
                   <?php
-}
-?>
+                  $data = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang ASC" );
+                  while ($row = mysqli_fetch_array($data)) {
+                    echo "<div class='col-lg-3 col-sm-6 mb-4'>";
+                    echo "";
+                    echo "<div class='card' id=''>";
+                    echo "<tr>";
+                    echo "<td colspan='3'><b style='font-size:18px'>$row[nama]</b></td>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td><img src='../images/barang/$row[image]' width=225px' height=200px;> $row[id_kategori] <br> Rp. $row[harga]</td>";
+                    echo "</tr>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "";
+                  }
+                  ?>
+                </div>
+                
+                <!-- <?php
+                include "../koneksi.php";
+
+                $data = mysqli_query($koneksi, "SELECT * FROM barang order by id_barang ASC");
+                while ($row = mysqli_fetch_array($data)) {
+                  ?>
+                  <div class="row tx-center">
+
+                    <div class="col-lg-3 col-sm-6 mb-4" >
+                      <div class="card" id="">
+                        <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-4" >
+                      <div class="card" id="">
+                        <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-sm-6 mb-4" >
+                      <div class="card" id="">
+                        <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6 mb-4" >
+                      <div class="card" id="">
+                        <?php echo "<img src = '../images/barang/$row[image]' width='255px'>"; ?>
+                      </div>
+                    </div>
+                    <?php
+                  }
+                  ?> -->
                 </div>
               </div>
             </div>
@@ -239,7 +261,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project One</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                  <p class="card-text">fafasfasfafaf</p>
                 </div>
               </div>
             </div>
@@ -250,7 +272,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Two</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                  <p class="card-text">fafasfasfafaf</p>
                 </div>
               </div>
             </div>
@@ -261,7 +283,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Three</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                  <p class="card-text"><center><img src="../images/bg.jpg" style="width: 50px;"></center>fafasfasfafaf</p>
                 </div>
               </div>
             </div>
@@ -272,7 +294,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Four</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                  <p class="card-text"><center><img src="../images/bg.jpg" style="width: 50px;"></center>fafasfasfafaf</p>
                 </div>
               </div>
             </div>
@@ -283,7 +305,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Five</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                  <p class="card-text"><center><img src="../images/bg.jpg" style="width: 50px;"></center>fafafafafafaa</p>
                 </div>
               </div>
             </div>
@@ -294,7 +316,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Six</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                  <p class="card-text">fafafafafafaa</p>
                 </div>
               </div>
             </div>
@@ -305,7 +327,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Six</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                  <p class="card-text">fafafafafafaa</p>
                 </div>
               </div>
             </div>
@@ -316,7 +338,7 @@ while ($row = mysqli_fetch_array($data)) {
                   <h4 class="card-title">
                     <a href="#">Project Six</a>
                   </h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                  <p class="card-text">fafafafafafaa</p>
                 </div>
               </div>
             </div>
@@ -342,7 +364,7 @@ while ($row = mysqli_fetch_array($data)) {
                     <img src="img/service.png" style="height: 70px; width: 70px;">
                   </div>
                   <br>
-                  <small> Kami melayani servis dengan setulus hati</small>
+                  <small> Kualitas terjamin</small>
                 </div>
               </div>
               <div class="col-md-4">
@@ -351,7 +373,7 @@ while ($row = mysqli_fetch_array($data)) {
                     <img src="img/service.png" style="height: 70px; width: 70px;">
                   </div>
                   <br>
-                  <small> Kami melayani servis dengan setulus hati</small>
+                  <small> Antar barang tidak perlu repot-repot</small>
                 </div>
               </div>
             </div>
