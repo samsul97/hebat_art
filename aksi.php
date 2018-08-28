@@ -83,27 +83,41 @@ else if ($_GET['act']=='ubah_barang')
 	}
 	else
 	{
-		$submit = mysqli_query($koneksi, "UPDATE barang SET nama='$_POST[nama]', id_kategori='$_POST[id_kategori]', berat='$_POST[berat]', ukuran='$_POST[ukuran]', harga='$_POST[harga]', deskripsi='$_POST[deskripsi]', harga='$_POST[harga]' WHERE id='$_POST[id]'");
-		if($submit) 
+		$cek = mysqli_query($koneksi, "SELECT * FROM barang WHERE image = '$image'");
+		$r = mysqli_fetch_array($cek);
+		$tipe_file   = $_FILES['image']['type'];
+		$lokasi_file = $_FILES['image']['tmp_name'];
+		$gambar  = $_FILES['image']['name'];
+		$ekstensi  = explode(".",$_FILES['image']['name']);
+		$nama_file = 'Hebat_Art_'. round($tgl) . '.' . end($ekstensi);
+		
+		if($lokasi_file !== '')
 		{
-			print "<script>
-			alert(\"Data berhasil di simpan\");
-			location.href = \"home.php?page=read_barang\";
-			</script>";
-		} 
-		else 
-		{
-			print "<script>
-			alert(\"Proses gagal!\");
-			location.href = \"home.php?page=update_barang\";
-			</script>";
-		}
+			unlink("images/barang/$r[image]");
+			$save_file =move_uploaded_file($lokasi_file,"images/barang/$nama_file");
+			$submit = mysqli_query($koneksi, "UPDATE barang SET nama='$_POST[nama]', id_kategori='$_POST[id_kategori]', berat='$_POST[berat]', ukuran='$_POST[ukuran]', harga='$_POST[harga]', deskripsi='$_POST[deskripsi]' WHERE id='$_POST[id]'");
+			if($submit) 
+			{
+				print "<script>
+				alert(\"Data berhasil di simpan\");
+				location.href = \"home.php?page=read_barang\";
+				</script>";
+			} 
+			else 
+			{
+				print "<script>
+				alert(\"Proses gagal!\");
+				location.href = \"home.php?page=update_barang\";
+				</script>";
+			}
 		// print $submit;
 		// 	die;
-		var_dump($submit);
+			var_dump($submit);
+		}
 	}
 }
-elseif ($_GET['act']=='hapus_barang')
+
+else if ($_GET['act']=='hapus_barang')
 {
 	mysqli_query($koneksi, "DELETE FROM barang where id_barang='$_GET[id_barang]'");
 	print "<script> alert (\"Data berhasil dihapus\")
@@ -114,10 +128,10 @@ else if($_GET['act']=='input_kategori')
 { 
 	if(!$_POST['nama']) 
 	{
-			print "<script>
-			alert(\"Ada form yang belum terisi!\");
-			location.href = \"home.php?page=insert_kategori\";
-			</script>";
+		print "<script>
+		alert(\"Ada form yang belum terisi!\");
+		location.href = \"home.php?page=insert_kategori\";
+		</script>";
 	}
 	elseif(!preg_match("/^[a-zA-Z .]*$/", $_POST['nama']))
 	{
